@@ -1,15 +1,10 @@
-/**
- * Created by Clint on 2/4/2016.
- */
+
 public class Main {
-    static  int getUserFarenheit() {
+    static  double getUserFarenheit() {
         java.util.Scanner scanner = new java.util.Scanner(System.in);
         System.out.println("Enter a Fahrenteit tempature");
         String userInput = scanner.nextLine();
         return Double.parseDouble(userInput);
-
-
-        
     }
 
     static double fToC(double fTemp){
@@ -24,7 +19,8 @@ public class Main {
         while (fTemp >= -460){
             double cTemp = fToC(fTemp);
             display(cTemp);
-        };
+            fTemp=getUserFarenheit();
+        }
 
 
 
