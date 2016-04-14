@@ -1,16 +1,10 @@
-package com.cmax.week07;
-
-/**
- * Created by Clint on 3/3/2016.
- */
-
-enum Direction {North, South, East, West};
+package com.cmax.week072;
 
 
+enum Direction {NORTH, SOUTH, EAST, WEST};
 
 class Storm {
     private double latitude;
-
     private double longitude;
     private double speed;
     private Direction direction;
@@ -48,16 +42,33 @@ class Storm {
     }
 
     public void display() {
-        System.out.println("the storm is located at (" + latitude + " " + longitude + " is moving "
-                + speed + "MPH" + direction + " .");
+        System.out.println("The storm is currently located at ("
+                + latitude + ", " + longitude + ") moving "
+                + speed + "MPH " + direction + ".");
     }
 }
+
 class ThunderStorm extends Storm {
+    private int numberOfLightningStrikes;
 
+    public int getNumberOfLightningStrikes() {
+        return numberOfLightningStrikes;
+    }
 
+    public void setNumberOfLightningStrikes(int numberOfLightningStrikes) {
+        this.numberOfLightningStrikes = numberOfLightningStrikes;
+    }
 
-
-
+    public void displayLightningStrikes() {
+        String message;
+        if (numberOfLightningStrikes == 1) {
+            message = "There has been 1 lightning strike.";
+        }
+        else {
+            message = "There have been " + numberOfLightningStrikes + " lightning strikes.";
+        }
+        System.out.println(message);
+    }
 }
 
 
@@ -67,9 +78,10 @@ public class Main {
         thunderStorm.setLatitude(39.970456);
         thunderStorm.setLongitude(-82.988770);
         thunderStorm.setSpeed(5);
-        thunderStorm.setDirection(Direction.East);
+        thunderStorm.setDirection(Direction.EAST);
+        thunderStorm.setNumberOfLightningStrikes(10);
 
         thunderStorm.display();
-
+        thunderStorm.displayLightningStrikes();
     }
 }

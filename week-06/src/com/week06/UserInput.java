@@ -56,25 +56,11 @@ class UserInput {
 
     public int promptString(String message) {
         System.out.println(message);
-        String userInput = scanner.nextLine();
+        String userstring = scanner.nextLine();
 
-        int userInt = 0;
-        boolean isInt = false;
-        while (!isInt) {
-            try {
-                userInt = Integer.parseInt(userInput);
-                isInt = true;
-            }
-            catch (NumberFormatException e) {
-                System.out.println(userInput + " is not a valid integer. " + message);
-                userInput = scanner.nextLine();
-            }
-            finally {
-                System.out.println("This line is always executed.");
-            }
-        }
 
-        return userInt;
+
+        return 0;
     }
 
 }
