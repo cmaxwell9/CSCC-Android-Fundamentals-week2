@@ -16,8 +16,6 @@ import java.util.*;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("The value can be a String, a integer, or a double");
-        System.out.println("Once you are done ... enter characters 'END' ");
             java.util.Scanner scanner = new java.util.Scanner(System.in);
             UserInput input = new UserInput();
             int aNumber = input.promptInt("Enter an integer.");
