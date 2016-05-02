@@ -16,14 +16,12 @@ package com.cmax.exercise7;
 
 public class Main {
     public static void main(String[] args) {
-        Contact arthur = new Contact("arthur", "arthur@arthur.com");
+        Contact clint = new Contact("Clint", "cmax0460@yahoo.com");
         BusinessContact bob = new BusinessContact("bob", "bob@bob.com", "123-456-7890");
 
-        ContactCollection collection = new ContactCollection();
-        collection.addContact(arthur);
-        collection.addContact(bob);
 
-        collection.displayContacts();
+        clint.display();
+        bob.display();
 
     }
 }
