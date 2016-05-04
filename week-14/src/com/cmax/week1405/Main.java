@@ -1,6 +1,6 @@
 package com.cmax.week1405;
+/*
 
-package com.myname.week_14;
 
 
         import com.google.gson.Gson;
@@ -62,3 +62,4 @@ public class Main {
         }
     }
 }
+*/

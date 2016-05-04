@@ -1,8 +1,8 @@
 package com.cmax.week1402;
-
+/*
 /**
  * Created by Clint on 4/28/2016.
- */
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -78,3 +78,4 @@ public class Main {
         System.out.println(forecast);
     }
 }
+*/

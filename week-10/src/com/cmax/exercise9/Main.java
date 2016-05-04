@@ -65,12 +65,16 @@ package com.cmax.exercise9;
 
          public class Main {
          public static void main(String[] args){
-                 PhoneContact phone = new PhoneContact("Bob", "123-456-7890");
-                 EmailContact email = new EmailContact("Sue", "sue@sue.com");
+                 PhoneContact phone = new PhoneContact("Clint", "937-642-5000");
+                 EmailContact email = new EmailContact("Clint", "cmax0460@yahoo.comm");
+                 EmailContact contact1 = new EmailContact("Mark", "Drifty@gmail.comm");
+                 PhoneContact contact2 = new PhoneContact("Patty","614-545-6621");
 
 
                 phone.contact();
              email.contact();
+             contact1.contact();
+             contact2.contact();
              }
      }
 

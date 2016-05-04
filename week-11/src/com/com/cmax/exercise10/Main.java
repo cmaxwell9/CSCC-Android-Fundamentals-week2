@@ -68,14 +68,14 @@ class ContactCollection implements Iterable<ExerciseContact> {
 
 public class Main {
     public static void main(String[] args) {
-        ExerciseContact bob = new ExerciseContact("bob", "bob@bob.com");
-        ExerciseContact arthur = new ExerciseContact("arthur", "aneuman1@cscc.edu");
-        ExerciseContact arthur2 = new ExerciseContact("arthur", "arthur@arthur.com");
+        ExerciseContact clint = new ExerciseContact("Clint", "Cmax0460@yahoo.com");
+        ExerciseContact Clint2 = new ExerciseContact("Clint", "cmaxwel@columbus.rr.com");
+        ExerciseContact Mark = new ExerciseContact("Mark", "Drifty@yahoo.com");
 
         ContactCollection contacts = new ContactCollection();
-        contacts.addContact(bob);
-        contacts.addContact(arthur2);
-        contacts.addContact(arthur);
+        contacts.addContact(clint);
+        contacts.addContact(Clint2);
+        contacts.addContact(Mark);
 
         for(ExerciseContact contact: contacts) {
             System.out.println(contact);

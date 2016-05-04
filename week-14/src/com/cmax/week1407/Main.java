@@ -1,5 +1,5 @@
 package com.cmax.week1407;
-
+/*
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -61,3 +61,4 @@ public class Main {
         System.out.println(gson.toJson(forecasts));
     }
 }
+*/
