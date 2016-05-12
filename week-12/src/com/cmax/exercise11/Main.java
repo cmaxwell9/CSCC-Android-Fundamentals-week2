@@ -1,7 +1,6 @@
 package com.cmax.exercise11;
 
 /**
- * Created by Clint on 4/19/2016.
  *
  * Modify the WeatherStation example from the lecture notes to
  * include a PressureSensor class that implements WeatherDataSource
@@ -10,9 +9,6 @@ package com.cmax.exercise11;
  * the WeatherStation instance as a listener for an instance of
  * PressureSensor and demonstrate an update of pressure data from the instance.
  */
-
-
-
         import java.util.*;
 
 interface WeatherDataListener {

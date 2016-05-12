@@ -1,13 +1,23 @@
 package com.cmax.exercise13;
 
 /**
- * Created by Clint on 5/2/2016.
+
+ * In the checking account example, we addressed the race condition though synchronization,
+ * first by declaring the withdraw() method as synchronized and second by using a synchronizer.
+ * An alternative method is to use a synchronize statement like this:
+
+ //some code
+ synchronize(object) {
+ // code that uses object but only allows one thread to access it at a time
+ }
+
+ This creates an intrinsic lock on object. Rewrite the checking account example to use an
+ intrinsic lock on the account object created Main.main().
+
+ *
+ *
  */
 
-
-/**
- * Created by aneuman1 on 4/21/2016.
- */
 
 class CheckingAccount {
     private int balance;

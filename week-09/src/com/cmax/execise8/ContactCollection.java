@@ -10,33 +10,34 @@ import java.util.Spliterator;
 import java.util.function.Consumer;
 
 
-public class ContactCollection implements Iterable<ExerciseContact> {
-    List<ExerciseContact> contacts = new ArrayList<>();
+public class ContactCollection implements Iterable<Contact> {
+    List<Contact> contacts = new ArrayList<>();
 
-    public void addContact(ExerciseContact newContact) {
+    public void addContact(Contact newContact) {
         contacts.add(newContact);
     }
 
-    public List<ExerciseContact> getContacts () {
+    public List<Contact> getContacts () {
         return contacts;
     }
 
     @Override
-    public Iterator<ExerciseContact> iterator() {
+    public Iterator<Contact> iterator() {
         return contacts.iterator();
     }
 
     @Override
-    public void forEach(Consumer<? super ExerciseContact> action) {
+    public void forEach(Consumer<? super Contact> action) {
 
     }
 
     @Override
-    public Spliterator<ExerciseContact> spliterator() {
+    public Spliterator<Contact> spliterator() {
         return null;
     }
-
+/*
     public void addContact(Contact arthur) {
     }
+    */
 }
-*/
+

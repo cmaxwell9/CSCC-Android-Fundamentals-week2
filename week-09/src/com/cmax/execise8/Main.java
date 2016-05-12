@@ -1,5 +1,7 @@
 package com.cmax.execise8;
 
+
+
 /**
  * Created by Clint on 4/19/2016.
  *
@@ -23,7 +25,7 @@ public class Main {
         collection.addContact(arthur);
         collection.addContact(bob);
 
-        collection.displayContacts();
+        Contact.display();
 
     }
 }

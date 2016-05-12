@@ -9,61 +9,70 @@ package com.cmax.exercise12;
  * first-out" whereas queues represent a "first-in, first-out" behavior.
 
  */
-/*
 
-class QueueFullException extends Exception{}
-class QueueEmptyException extends Exception{}
+/**
+ * Created by aneuman1 on 4/21/2016.
+ */
 
-class Queue<E>{
+class QueueFullException extends Exception {}
+
+class QueueEmptyException extends Exception {}
+
+class Queue<E> {
     private E[] elements;
     private int index;
     private int size;
 
-    Queue(int size){
+    Queue(int size) {
         this.size = size;
-        elements  = (E[]) new Object[size];
+        elements = (E[]) new Object[size];
         index = 0;
-
-
     }
+
     public void enqueue(E element) throws QueueFullException {
         if (index >= size) {
             throw new QueueFullException();
         }
-        elements[index] =element;
-        index++;
 
+        elements[index] = element;
+        index++;
     }
 
-    public void dequeue(E element) throws QueueEmptyException {
-        if (index == 0){
+    public E dequeue() throws QueueEmptyException {
+        if (index == 0) {
             throw new QueueEmptyException();
-
         }
-            E returnValue = element[0];
-            E[] newElements = (E[]) new Object[size];
-            for(int i =1; i < size; i++){
-                newElements[i-1] = elements[1];
-            }
+
+        E returnValue = elements[0];
+
+        E[] newElements = (E[]) new Object[size];
+        for(int i = 1; i < size; i++) {
+            newElements[i-1] = elements[i];
+        }
         index--;
         elements = newElements;
         return returnValue;
-
     }
-
-
 }
 
-public class Main {
-    public static void main(Sring[] args){
-        Queue< String> names = new Queue(20);
+class QueueExample {
+    public static void main(String[] args) {
+        Queue<String> names = new Queue(4);
 
-        try{
-            names.enqueue("bob");
-            names.enqueue("sue");
+        try {
+            names.enqueue("Clint");
+            names.enqueue("Patty");
+            names.enqueue("Kristy");
+            names.enqueue("Greg");
+            System.out.println(names.dequeue());
+            System.out.println(names.dequeue());
+            System.out.println(names.dequeue());
+            System.out.println(names.dequeue());
+ //           System.out.println(names.dequeue());
         }
-
-
+        catch (QueueEmptyException | QueueFullException e) {
+            e.printStackTrace();
+        }
     }
 }
-*/
+
