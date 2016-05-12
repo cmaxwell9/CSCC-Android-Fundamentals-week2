@@ -24,8 +24,9 @@ public class Main {
         ContactCollection collection = new ContactCollection();
         collection.addContact(arthur);
         collection.addContact(bob);
+        for (Contact contact: collection) {
+            contact.display();
+            };
 
-        Contact.display();
-
-    }
+}
 }
